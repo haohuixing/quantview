@@ -1,10 +1,11 @@
-yfinance>=0.2.50
+yfinance
 streamlit
 pandas
 plotly
 requests
 supabase
 streamlit-autorefresh
+
 
 
 
