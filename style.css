@@ -1,0 +1,244 @@
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    /* ===== GLOBAL THEME ===== */
+    .stApp {
+        background-color: #0E1117;
+        color: #E6EDF3;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* ===== MAIN TITLE ===== */
+    .main-title {
+        text-align: center;
+        font-size: 14vmin !important;
+        font-weight: 700 !important;
+        margin-top: 20vmin !important;
+        margin-bottom: 0vmin !important;
+    }
+
+    h1.main-title a {
+        display: none;
+    }
+
+    /* ===== HEADERS ===== */
+    h1, h2, h3 {
+        font-weight: 600 !important;
+    }
+
+    /* ===== GLOBAL BUTTON STYLE ===== */
+    div.stButton > button,
+    div.stFormSubmitButton > button {
+
+        background-color: #2563EB !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        height: 50px !important;
+        transition: all 0.2s ease-in-out !important;
+    }
+
+    div.stButton > button:hover,
+    div.stFormSubmitButton > button:hover {
+
+        background-color: #3B82F6 !important;
+        transform: scale(1.03) !important;
+    }
+
+    /* ===== INPUT FIELDS ===== */
+    input, textarea {
+        background-color: #161B22 !important;
+        color: white !important;
+        border-radius: 8px !important;
+        border: 1px solid #30363D !important;
+        caret-color: white !important; /* FIX: Makes the cursor visible in dark mode */
+    }
+
+    /* Fix for the white stripe on the password eye icon */
+    div[data-baseweb="input"] button {
+        background-color: transparent !important;
+    }
+
+    /* Remove annoying input instructions */
+    div[data-testid="InputInstructions"] > span:nth-child(1) {
+        display: none !important;
+    }
+
+    /* Hide password reveal on Edge */
+    input[type=password]::-ms-reveal,
+    input[type=password]::-ms-clear {
+        display: none !important;
+    }
+    /* ===== INPUT LABEL TEXT ===== */
+    label {
+        color: #E6EDF3 !important;
+        font-weight: 500 !important;
+    }
+
+    /* ===== INPUT BOX ===== */
+    /* This targets the main container to remove the white stripe */
+    div[data-baseweb="input"] {
+        background-color: #161B22 !important;
+        border-radius: 8px !important;
+    }
+
+    /* Target the internal wrapper for the input and icon */
+    div[data-baseweb="input"] > div {
+        background-color: #161B22 !important;
+        border: 1px solid #30363D !important;
+        border-radius: 8px !important;
+    }
+
+    /* This targets the specific button container for the eye icon */
+    div[data-baseweb="input"] button {
+        background-color: #161B22 !important; /* Matches textbox color */
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Removes potential white background on hover/active states of the icon button */
+    div[data-baseweb="input"] button:hover, 
+    div[data-baseweb="input"] button:active,
+    div[data-baseweb="input"] button:focus {
+        background-color: #161B22 !important;
+    }
+
+    /* ===== PASSWORD EYE ICON ===== */
+    div[data-baseweb="input"] svg {
+        fill: #8B949E !important;
+    }
+
+    div[data-baseweb="input"] svg:hover {
+        fill: #E6EDF3 !important;
+    }
+    /* ===== MENU CARD STYLE (Used on Home) ===== */
+    .menu-card {
+        background: #161B22;
+        padding: 40px;
+        border-radius: 16px;
+        text-align: center;
+        border: 1px solid #21262D;
+        transition: all 0.25s ease;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-6px);
+        border: 1px solid #2563EB;
+        box-shadow: 0px 10px 30px rgba(37,99,235,0.3);
+    }
+    /* ===== DASHBOARD SPECIFIC ===== */
+    .dashboard-title {
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 2rem !important;
+        text-align: left;
+    }
+
+    /* List/Table Container */
+    .scroll-area {
+        background: #161B22;
+        border: 1px solid #30363D;
+        border-radius: 12px;
+        padding: 20px;
+        height: 500px;
+        overflow-y: auto;
+    }
+
+    /* Small price text under graph */
+    .price-text {
+        font-size: 1.2rem;
+        color: #8B949E;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+    /* ===== ROUNDED CONTAINERS FOR CHARTS/TABLES ===== */
+    /* Targets the dataframe/table */
+    [data-testid="stElementContainer"] div[data-testid="stTable"], 
+    [data-testid="stDataFrame"] {
+        border-radius: 16px !important;
+        border: 1px solid #30363D !important;
+        overflow: hidden !important;
+        background-color: #161B22 !important;
+    }
+
+    /* Targets the chart area */
+    [data-testid="stArrowVegaLiteChart"] {
+        border-radius: 16px !important;
+        border: 1px solid #30363D !important;
+        background-color: #161B22 !important;
+        padding: 15px !important;
+    }
+
+    /* ===== DASHBOARD SPECIFIC ===== */
+    .dashboard-title {
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 1.5rem !important;
+        margin-top: 1rem !important;
+        text-align: left;
+    }
+
+    .price-text {
+        font-size: 1.1rem;
+        color: #8B949E;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 5px;
+    }
+
+    .price-highlight {
+        color: #2563EB;
+        font-weight: 700;
+    }
+    /* ===== ROUNDED CONTAINERS & DARK THEME FOR TABLES/CHARTS ===== */
+    
+    /* Target the container for Dataframes and Tables */
+    [data-testid="stDataFrame"], [data-testid="stTable"] {
+        background-color: #161B22 !important;
+        border: 1px solid #30363D !important;
+        border-radius: 16px !important;
+        overflow: hidden !important; /* This forces the content to follow the border radius */
+        padding: 8px !important;
+    }
+
+    /* Force the internal Dataframe canvas to blend in */
+    [data-testid="stDataFrame"] > div {
+        background-color: #161B22 !important;
+    }
+
+    /* Target the Chart container */
+    [data-testid="stArrowVegaLiteChart"] {
+        background-color: #161B22 !important;
+        border: 1px solid #30363D !important;
+        border-radius: 16px !important;
+        padding: 20px !important;
+    }
+
+    /* Target the actual chart SVG/Canvas area */
+    summary + div[role="graphics-document"] {
+        border-radius: 12px !important;
+    }
+	/* Styling the metrics inside the Stock Lookup */
+	[data-testid="stMetricValue"] {
+		font-size: 1.4rem !important;
+		font-weight: 700 !important;
+	}
+
+	/* Make the list rows look tighter */
+	[data-testid="column"] {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* Ensure the chart background matches the card theme */
+	[data-testid="stArrowVegaLiteChart"] {
+		background-color: #161B22 !important;
+		border: 1px solid #30363D !important;
+	}
+
+	
+    /* Fix the "White Background" flash on charts */
+    .vega-embed.vegalite {
+        background-color: transparent !important;
+    }
