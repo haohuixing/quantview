@@ -1,10 +1,8 @@
-### Imports 
+### Imports from other libraries
 import yfinance
 
-
-## WORK IN PROGRESS
-
-def calcAlpha(ticker):
+# My custom SIMPLE ALPHA function - it calculates how well a stock performs against the S&P 500, but does not factor in Beta
+def calcAlpha(ticker): # Math formula: Alpha = [(StockPrice_Now / StockPrice_Year_Ago - 1) - (IndexPrice_Now / IndexPrice_Year_Ago - 1)] * 100
     stock_h = ticker.history(period="1y")
     spy_h = yfinance.Ticker("^GSPC").history(period="1y")
     if len(stock_h) > 0 and len(spy_h) > 0:
@@ -13,9 +11,10 @@ def calcAlpha(ticker):
         return (stock_perf - spy_perf) * 100
     return 0
 
-# toolkit.py
 
-def merge_sort(arr, key, reverse=False):
+# Merge sort 
+# Key is what indicator to sort by, for example key = "volume' means mergesort sorts the stocks by volume
+def merge_sort(arr, key, reverse=False): 
     if len(arr) <= 1:
         return arr
 
@@ -30,7 +29,6 @@ def merge(left, right, key, reverse):
     i = j = 0
 
     while i < len(left) and j < len(right):
-        # Comparison logic
         if not reverse:
             condition = left[i][key] <= right[j][key]
         else:
